@@ -27,7 +27,7 @@ Section:NewButton("Animation Changer", "Animation Changes", function()
     end
 end)
 
-Section:NewButton("Chat-Spy", "Spys Chat", function()
+Section:NewButton("Chat-Spy", "Spy's Chat", function() 
            -- This is not mine, unsure who made it but i didn't create this
 
 -- // Initialise
@@ -131,8 +131,6 @@ local chatFrame = LocalPlayer.PlayerGui.Chat.Frame;
 chatFrame.ChatChannelParentFrame.Visible = true;
 chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position + UDim2.new(UDim.new(), chatFrame.ChatChannelParentFrame.Size.Y);
 end)
-end)
-
 
 local Tab = Window:NewTab("Anti-Locks")
 local Section = Tab:NewSection("Anti-Locks")
