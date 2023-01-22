@@ -165,6 +165,18 @@ chr.RightFoot.MeshId = "902942089"
 chr.RightFoot.Transparency = "1"
 end)
 
+Section:NewButton("Anti-Stomp", "Anti Stomp", function()
+           game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(KeyPressed)
+ if KeyPressed == "k" then
+    for L_170_forvar0, L_171_forvar1 in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+        if L_171_forvar1:IsA("BasePart") then
+            L_171_forvar1:Destroy()
+        end
+    end
+    end
+end)
+end)
+
 local Tab = Window:NewTab("Anti-Locks")
 local Section = Tab:NewSection("Anti-Locks")
 
