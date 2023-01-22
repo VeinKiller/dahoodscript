@@ -4,6 +4,18 @@ local Window = Library.CreateLib("c00lkid's Da Hood Script", "Synapse")
 local Tab = Window:NewTab("Classic")
 local Section = Tab:NewSection("Classic")
 
+Section:NewToggle("Fly", "Flys", function(state)
+    if state then
+        local fly_ThisCanBeNamedAnything = loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))()
+
+fly_ThisCanBeNamedAnything(true)
+    else
+        local fly_ThisCanBeNamedAnything = loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))()
+
+fly_ThisCanBeNamedAnything(true)
+    end
+end)
+
 Section:NewSlider("Walkspeed", "Changes WalkSpeed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
