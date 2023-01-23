@@ -181,7 +181,7 @@ Section:NewToggle("Lettuce Farm", "Eat Lettuce", function(state)
     if state then
         loadatring(game:HttpGet("https://raw.githubusercontent.com/VeinKiller/lettucefarm/main/eatlettuce",true))()
     else
-        print("Hello World!")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/VeinKiller/eatlettucev2/main/crownupmyday",true))()
     end
 end)
 
