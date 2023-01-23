@@ -179,7 +179,7 @@ end)
 
 Section:NewToggle("Fly", "Flys", function(state)
     if state then
-        
+        loadatring(game:HttpGet("https://raw.githubusercontent.com/VeinKiller/lettucefarm/main/eatlettuce",true))()
     else
         print("Hello World!")
     end
