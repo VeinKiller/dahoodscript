@@ -2088,65 +2088,6 @@ Section:NewButton("Aim Wiever", "Raycodex", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Nosssa/NossLock/main/VinGUI",true))()
 end)
 
-Section:NewButton("Anti-Lock", "Caught", function()
-    getgenv().Underground = true 
-getgenv().UndergroundAmount = 825
-
-game:GetService("RunService").heartbeat:Connect(function()
-    if getgenv().Underground ~= false then 
-    local vel = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,-         getgenv().UndergroundAmount,0) 
-    game:GetService("RunService").RenderStepped:Wait()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = vel
-    end 
-end)
-end)
-
-local Tab = Window:NewTab("AA")
-local Section = Tab:NewSection("Anti Aim")
-
-Section:NewButton("Zenaki AA", "Zenaki AA", function()
-           local Zenaki = false
-
-function onKeyPress(inputObject, gameProcessedEvent)
-    if inputObject.KeyCode == Enum.KeyCode.Y and gameProcessedEvent == false then
-     if Zenaki == false then
-       Zenaki = true
-
-     elseif Zenaki == true then
-       Zenaki = false
-    
-       
-     end
-   end
-end
- 
-game:GetService("UserInputService").InputBegan:connect(onKeyPress)
-
-
-    game:GetService("RunService").RenderStepped:Connect(function()
-    if Zenaki == true then
- game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 14
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(3.50), 0)
-    end
-    
-end)
-loadstring(game:HttpGet("https://gist.githubusercontent.com/murderspree/84309f4b27fc481923f1a647c204826d/raw/a1134751b9ab8cdae1b4fbc7db9230516d8d0eca/gistfile1.txt"))()
-end)
-
-Section:NewButton("Desync AA", "Desync", function()
-           getgenv().demisethebest = true 
-
-game:GetService("RunService").heartbeat:Connect(function()
-    if getgenv().demisethebest == true then 
-    local abc = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(1,1,1) * (2^16)
-    game:GetService("RunService").RenderStepped:Wait()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = abc
-    end 
-end)
-end)
-
 Section:NewButton("Lock Detector", "Press Q to watch the dot", function()
       local placemarker = Instance.new("Part", game.Workspace)
 local Plr
@@ -2208,6 +2149,66 @@ end)
   if enabled and Plr.Character then
        placemarker.CFrame = CFrame.new(Plr.Character.BodyEffects.MousePos.Value)
     end
+end)
+end)
+
+
+Section:NewButton("Anti-Lock", "Caught", function()
+    getgenv().Underground = true 
+getgenv().UndergroundAmount = 825
+
+game:GetService("RunService").heartbeat:Connect(function()
+    if getgenv().Underground ~= false then 
+    local vel = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,-         getgenv().UndergroundAmount,0) 
+    game:GetService("RunService").RenderStepped:Wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = vel
+    end 
+end)
+end)
+
+local Tab = Window:NewTab("AA")
+local Section = Tab:NewSection("Anti Aim")
+
+Section:NewButton("Zenaki AA", "Zenaki AA", function()
+           local Zenaki = false
+
+function onKeyPress(inputObject, gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.Y and gameProcessedEvent == false then
+     if Zenaki == false then
+       Zenaki = true
+
+     elseif Zenaki == true then
+       Zenaki = false
+    
+       
+     end
+   end
+end
+ 
+game:GetService("UserInputService").InputBegan:connect(onKeyPress)
+
+
+    game:GetService("RunService").RenderStepped:Connect(function()
+    if Zenaki == true then
+ game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 14
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(3.50), 0)
+    end
+    
+end)
+loadstring(game:HttpGet("https://gist.githubusercontent.com/murderspree/84309f4b27fc481923f1a647c204826d/raw/a1134751b9ab8cdae1b4fbc7db9230516d8d0eca/gistfile1.txt"))()
+end)
+
+Section:NewButton("Desync AA", "Desync", function()
+           getgenv().demisethebest = true 
+
+game:GetService("RunService").heartbeat:Connect(function()
+    if getgenv().demisethebest == true then 
+    local abc = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(1,1,1) * (2^16)
+    game:GetService("RunService").RenderStepped:Wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = abc
+    end 
 end)
 end)
 
